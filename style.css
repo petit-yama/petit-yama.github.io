@@ -1,0 +1,298 @@
+body {
+    background-color: #ceefea
+}
+
+.all_content {
+    margin: auto;
+    padding: 3em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.52);
+    border: 2px;
+    border-radius: 10px;
+
+}
+
+.switch_text {
+    display: flex;
+    align-items: left;
+}
+
+#myCanvas {
+    background-color: #fff;
+    margin: 0 auto;
+    border: 2px solid #25d0b4;
+    border-radius: 5px;
+}
+
+.start_pause_replay {
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #34a592;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.start_pause_replay:disabled {
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #757973;
+    color: rgb(189, 187, 187);
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: not-allowed;
+}
+
+table {
+    margin: 0 auto;
+}
+
+.add_min_button {
+    background-color: #fff;
+    border-radius: 20px;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.add_min_button:hover {
+    background-color: #f4a7a7;
+    border-radius: 20px;
+    color: #333;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.sub_min_button {
+    background-color: #fff;
+    border-radius: 20px;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.sub_min_button:hover {
+    background-color: #a4c5f7;
+    border-radius: 20px;
+    color: #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.time_set_num {
+    font-size: 2rem;
+}
+
+.time_set_str {
+    font-size: 1rem;
+}
+
+#explanation {
+    margin: 0.9rem;
+}
+
+.list_selectbox {
+    position: relative;
+}
+
+.list_selectbox::before,
+.list_selectbox::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+}
+
+.list_selectbox::before {
+    right: 0;
+    display: inline-block;
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 0 3px 3px 0;
+    background-color: #25d0b4;
+    content: '';
+}
+
+.list_selectbox::after {
+    position: absolute;
+    top: 50%;
+    right: 1.4em;
+    transform: translate(50%, -50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    content: '';
+}
+
+.list_selectbox select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-width: 230px;
+    height: 2.8em;
+    padding: .4em 3.6em .4em .8em;
+    border: 2px solid #25d0b4;
+    border-radius: 3px;
+    color: #333333;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.list_selectbox select:focus {
+    outline: 1px solid #25d0b4;
+}
+
+.video_testplay_button {
+    background-color: #fff;
+    border-radius: 20px;
+    color: #333;
+    padding: 6px 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.accordion_all{
+    margin: 1rem;
+}
+
+.accordion_all.accordion {
+    margin: 2rem;
+    display: flex;
+}
+
+.accordion {
+    max-width: 500px;
+    background-color: #f2f2f2;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.accordion:not([open]) {
+    margin-bottom: 7px;
+}
+
+.accordion summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1em 2em;
+    border-radius: 5px;
+    background-color: #25d0b4;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion summary::before,
+.accordion summary::after {
+    width: 3px;
+    height: .9em;
+    border-radius: 5px;
+    background-color: #fff;
+    content: '';
+}
+
+.accordion summary::before {
+    position: absolute;
+    right: 2em;
+    rotate: 90deg;
+}
+
+.accordion summary::after {
+    transition: rotate .3s;
+}
+
+.accordion[open] summary::after {
+    rotate: 90deg;
+}
+
+.accordion input {
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0.5em;
+    padding: 1em 1em 1em 1em;
+    color: #333333;
+    transition: transform .5s, opacity .5s;
+    width: 450px;
+}
+
+.accordion[open] input {
+    transform: none;
+    opacity: 1;
+}
+
+/* スイッチの枠のデザイン   */
+.switch-label {
+  width: 45px;
+  height: 20px;
+  border-radius: 20px;
+  position: relative;
+  display: inline-block;
+  background: #ddd;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+/* スイッチのボールのデザイン */
+.switch-label::before {
+  content: '';
+
+  /* ボールを作る */
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #b1a4b1;
+  box-shadow: 0 0 4px rgba(0,0,0,.3);
+
+  /* ボールの位置調整 */
+  position: absolute;
+  left: 0;
+  top: 0;
+
+    /* ボールの速度調整（追加部分） */
+  transition: .5s;
+}
+
+/* チェックボックスがチェックされたらスイッチの背景色が変わる（追加部分）*/
+  .switch-input:checked + .switch-label {
+    background: #16f440;
+  }
+    
+/* チェックボックスがチェックされたらボールが右に移動しボールの色も変わる（追加部分）*/
+.switch-input:checked + .switch-label::before {
+  background: #00ff00;
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+/* チェックボックスを消す   */
+.switch-input {
+  display: none;
+}
+
+.sound_switch{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
