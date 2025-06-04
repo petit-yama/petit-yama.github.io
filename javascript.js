@@ -55,7 +55,7 @@ function fillRoundedRect(ctx, x, y, width, height, radius) {
     ctx.fill();
 }
 
-Notification.requestPermission().then((result) => {
+/*Notification.requestPermission().then((result) => {
     console.log(result);
     if (result = "denied") {
         document.getElementById("notification_button").textContent = "デスクトップ通知 不可"
@@ -79,7 +79,7 @@ function NotificationButton() {
                 break;
         }
     })
-};
+};*/
 
 // タイマー時刻の設定：時間
 function addHour(h_addNo) {
@@ -167,7 +167,7 @@ function play(startSec, playMode) {
         if (now <= 0) {
             // 指定時間が終了した場合の表示
             document.getElementById("timerTxt").textContent = "体を動かしましょう！";
-            desktopNotification();
+            //desktopNotification();
             clearInterval(timerDsp);
             // youtube APIを使用した動画再生
             videoPlayer();
@@ -180,9 +180,9 @@ function play(startSec, playMode) {
             const ctx = canvas.getContext("2d");
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             // 通知音再生
-            const soundSwitch = document.getElementById("switch");
+            /*const soundSwitch = document.getElementById("switch");
             console.log(soundSwitch.checked);
-            if (soundSwitch.checked == true) {audioPlay();}
+            if (soundSwitch.checked == true) {audioPlay();}*/
         } else {
             nowSec += 1;
             draw(goalSec, now);
